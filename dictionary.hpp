@@ -14,8 +14,9 @@ public:
 	Dictionary(int size) : k(size) {}
 	void addWord(string& word);
 	
-	void save(string& fileName);
-	void load(string& fileName);
+	void save(string fileName);
+	void load(string fileName);
+	void print();
 
 	void affichageMotCompleted(string& monBoutDeChaine);
 	void showSorted(vector<Mot>& list);

@@ -1,7 +1,7 @@
 # compilateur
 cc = g++
 # options de compilation (utilisé en cc -c)
-CXXFLAGS = -Wall -ansi -pedantic -Wextra -g -O2
+CXXFLAGS = -Wall -ansi -pedantic -Wextra -g -O2 -std=c++0x -pthread
 # options de l'edition des liens (utilisé en cc -o) (les bibliothèques utilisées)
 LDFLAGS = -lm
 # liste des fichiers sources

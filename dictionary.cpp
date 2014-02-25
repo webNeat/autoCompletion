@@ -30,7 +30,7 @@ void Dictionary::addWord(string& word){
 	}
 }
 
-void Dictionary::load(string& fileName){
+void Dictionary::load(string fileName){
 	string value;
 	int occ;
 	ifstream input(fileName.c_str());
@@ -73,19 +73,20 @@ void Dictionary::affichageMotCompleted(string& monBoutDeChaine){
 void Dictionary::showSorted(vector<Mot>& list){
 	sort(list.begin(), list.end());
 	vector<Mot>::iterator it = list.begin();
-	cout << endl;
+	cout << " [ ";
+	cout << it->getValue();
+	it ++;
 	while(it != list.end()){
-		cout << it->getValue() << endl;
+		cout << " | " << it->getValue();
 		it ++;
 	}
+	cout << " ] ";
 }
 
-void Dictionary::save(string& fileName){
+void Dictionary::save(string fileName){
 	//
-	ofstream myFile;
+	ofstream myFile(fileName.c_str());
 	map< string , vector<Mot> >::iterator it1;
-	//
-	myFile.open(fileName.c_str());
 	//
 	for(it1 = words.begin();it1 != words.end();it1++){
 		for(vector<Mot>::iterator it2 = it1->second.begin(); it2 != it1->second.end(); it2 ++){
@@ -95,4 +96,17 @@ void Dictionary::save(string& fileName){
 	}
 	//
 	myFile.close(); 
+}
+
+void Dictionary::print(){
+	string text = "";
+	map< string , vector<Mot> >::iterator it1;
+	//
+	for(it1 = words.begin();it1 != words.end();it1++){
+		text += it1->first + ":\n";
+		for(vector<Mot>::iterator it2 = it1->second.begin(); it2 != it1->second.end(); it2 ++){
+			text += "\t" + it2->getValue() + "\n";
+		}
+	}
+	cout << text;
 }

@@ -1,21 +1,27 @@
 #include <iostream>
-#include <cstdio>
-#include <string>
 #include <cstdlib>
+#include "dictionary.hpp"
 using namespace std;
 
 int main(){
-	Dictionary dictionnaire(5);
-	dictonnaire.load('MyFile.txt');
-	char a;
-	string Text;
-	string Lexem;
-	while((cin >>noskipws>> a) && a != '\n'){
-		Text = Text + a;
-		if(a != ' '){Lexem = "";}
-		Lexem = Lexem + a;
-		dictonnaire.affichageMotCompleted(Lexem);
-	}
-	
-	cout << endl << str;
+    Dictionary dictionnaire(1);
+    char a;
+	string text,
+		lexem;
+
+    dictionnaire.load("words.txt");
+    system("/bin/stty raw");
+    while((cin >> noskipws >> a) && a != '*'){
+        text = text + a;
+        if(a == ' ')
+            lexem = "";
+        else
+            lexem = lexem + a;
+        system("clear");
+        cout << text;
+        dictionnaire.affichageMotCompleted(lexem);
+    }
+    system ("/bin/stty cooked");
+    cout << endl;
+    return 0;
 }
