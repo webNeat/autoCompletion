@@ -1,31 +1,22 @@
-#include<sting>
-
-
-
+#include <string>
+using namespace std;
 
 class Mot {
-	private :
+private:
 	string value;
 	int nbrOccur;
-	public :
-	
+
+public:	
 	Mot(string value , int nbrOccur = 0);
-	
 	string getValue();
-	
 	void setValue(string value);
-	
 	int getNbrOccur();
-   
 	void setNbrOccur(int nbrOccur);
-
-
+	
 	bool operator<(const Mot & mot){
 		return ( this->nbrOccur < mot.nbrOccur );
 	}
-}
-
-
+};
 
 //class Mot .
 //class Liste de mots : contient map de clés asociées a des vecteurs de strings
