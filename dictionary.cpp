@@ -58,3 +58,22 @@ void Dictionary::affichageMotCompleted(string& monBoutDeChaine){
 		}
 	}
 }
+
+
+void Dictionary::Save(string & fileName){
+	
+	//
+	ofstream myFile;
+	map< string , vector<Mot> >::iterator it1;
+	//
+	myFile.open(fileName);
+	//
+	for(it1 = words.begin();it1 != words.end();it1++)
+	{
+		for( vector<Mot>iterator::it2 = it1->second.begin() ; it2 != it1.end() ; it2++ )
+		{
+			myFile << it2->getValue()  << " " << it2->getNbrOccur() << endl;
+		}
+	}
+	myFile.close(); 
+}
