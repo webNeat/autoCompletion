@@ -1,8 +1,8 @@
 #include <vector>
 #include <iostream>
 #include <fstream>
+#include <map>
 #include "Mot.hpp"
-
 using namespace std;
 
 void Save(string fileName , map< string , vector<Mot> > vect ){
