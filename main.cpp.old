@@ -1,0 +1,21 @@
+#include <iostream>
+#include "dictionary.hpp"
+using namespace std;
+
+int main(){
+	Dictionary dic(3);
+	string word = "Amine";
+	dic.addWord(word);
+	word = "Mohammed";
+	dic.addWord(word);
+	word = "Ali";
+	dic.addWord(word);
+	word = "Jamal";
+	dic.addWord(word);
+	word = "Fouad";
+	dic.addWord(word);
+	string file = "words.txt";
+	dic.save(file);
+	cout << "done" << endl;
+	return 0;
+}

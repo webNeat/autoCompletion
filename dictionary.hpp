@@ -1,3 +1,5 @@
+#ifndef DICTIONARY_HPP
+#define DICTIONARY_HPP 1
 #include <map>
 #include <vector>
 #include <string>
@@ -16,4 +18,6 @@ public:
 	void load(string& fileName);
 
 	void affichageMotCompleted(string& monBoutDeChaine);
+	void showSorted(vector<Mot>& list);
 };
+#endif
