@@ -19,7 +19,6 @@ class Mot {
    
 	void setNbrOccur(int nbrOccur);
 
-
 	bool operator<(const Mot & mot){
 		return ( this->nbrOccur < mot.nbrOccur );
 	}
