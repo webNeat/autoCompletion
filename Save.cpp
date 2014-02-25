@@ -19,7 +19,7 @@ void Save(string fileName , map< string , vector<Mot> > vect ){
 	{
 		for( vector<Mot>iterator::it2 = it1->second.begin() ; it2 != it1.end() ; it2++ )
 		{
-			myFile << it2->First->getValue();
+			myFile << it2->F->getValue();
 			myFile << " " << it2->First->getNbrOccur();
 		}
 	}

@@ -16,7 +16,7 @@ class Mot {
 	void setValue(string value);
 	
 	int getNbrOccur();
-	
+    //fff
 	void setNbrOccur(int nbrOccur);
 
 
