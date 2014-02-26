@@ -71,6 +71,8 @@ void Dictionary::affichageMotCompleted(string& monBoutDeChaine){
 }
 
 void Dictionary::showSorted(vector<Mot>& list){
+	if(list.size() < 1)
+		return;
 	sort(list.begin(), list.end());
 	vector<Mot>::iterator it = list.begin();
 	cout << " [ ";
